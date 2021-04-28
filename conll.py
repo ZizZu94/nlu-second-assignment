@@ -19,12 +19,14 @@ def align_hyp(ref, hyp):
     # align references and hypotheses for evaluation
     # add last element of token tuple in hyp to ref
     if len(ref) != len(hyp):
-        raise ValueError("Size Mismatch: ref: {} & hyp: {}".format(len(ref), len(hyp)))
+        raise ValueError(
+            "Size Mismatch: ref: {} & hyp: {}".format(len(ref), len(hyp)))
 
     out = []
     for i in range(len(ref)):
         if len(ref[i]) != len(hyp[i]):
-            raise ValueError("Size Mismatch: ref: {} & hyp: {}".format(len(ref), len(hyp)))
+            raise ValueError(
+                "Size Mismatch: ref: {} & hyp: {}".format(len(ref), len(hyp)))
         out.append([(*ref[i][j], hyp[i][j][-1]) for j in range(len(ref[i]))])
     return out
 
@@ -123,7 +125,8 @@ def is_boc(lbl, iob, prev_lbl, prev_iob, otag='O'):
     boc = False
 
     boc = True if iob in ['B', 'S', 'U'] else boc
-    boc = True if iob in ['E', 'L'] and prev_iob in ['E', 'L', 'S', otag] else boc
+    boc = True if iob in ['E', 'L'] and prev_iob in [
+        'E', 'L', 'S', otag] else boc
     boc = True if iob == 'I' and prev_iob in ['S', 'L', 'E', otag] else boc
 
     boc = True if lbl != prev_lbl and iob != otag and iob != '.' else boc
@@ -177,9 +180,11 @@ def score(cor_cnt, hyp_cnt, ref_cnt):
 
 def summarize(seg, cls):
     # class-level
-    res = {lbl: score(cls[lbl]['cor'], cls[lbl]['hyp'], cls[lbl]['ref']) for lbl in set(cls.keys())}
+    res = {lbl: score(cls[lbl]['cor'], cls[lbl]['hyp'],
+                      cls[lbl]['ref']) for lbl in set(cls.keys())}
     # micro
-    res.update({"total": score(seg.get('cor', 0), seg.get('hyp', 0), seg.get('ref', 0))})
+    res.update({"total": score(seg.get('cor', 0),
+                               seg.get('hyp', 0), seg.get('ref', 0))})
     return res
 
 
@@ -201,7 +206,8 @@ def read_corpus_conll(corpus_file, fs="\t"):
             if not featn:
                 featn = len(feats)
             elif featn != len(feats) and len(feats) != 0:
-                raise ValueError("Unexpected number of columns {} ({})".format(len(feats), featn))
+                raise ValueError(
+                    "Unexpected number of columns {} ({})".format(len(feats), featn))
 
             words.append(feats)
         else:
