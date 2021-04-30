@@ -4,7 +4,7 @@ Natural Language Understanding second assignment.
 
 The objective of this assignment is to learn about Name Entity Recognition (NER).
 
-The file `notebook.ipynb` is a [Jupyter](https://jupyter.org/) notebook, which contains all python codes and the report. Use [Google Colab](https://colab.research.google.com/) or any Jupyter notebook viewer to open it.
+The file `notebook.ipynb` is a [Jupyter](https://jupyter.org/) notebook, which contains all [python codes](https://github.com/ZizZu94/nlu-second-assignment/blob/main/notebook.ipynb) and the [Report](https://github.com/ZizZu94/nlu-second-assignment/blob/main/notebook.ipynb). Use [Google Colab](https://colab.research.google.com/) or any Jupyter notebook viewer to open it.
 
 ## Student:
 
