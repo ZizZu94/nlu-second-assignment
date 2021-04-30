@@ -1,6 +1,6 @@
 # [NLU] Second Assignment
 
-Natural Language Understanding first assignment.
+Natural Language Understanding second assignment.
 
 The objective of this assignment is to learn about Name Entity Recognition (NER).
 
@@ -14,9 +14,7 @@ The file `notebook.ipynb` is a [Jupyter](https://jupyter.org/) notebook, which c
 
 ## Getting Started
 
-### Requirements
-
-#### Python
+### Python
 
 You need Python 3.5 or later to run mypy. You can have multiple Python
 versions (2.x and 3.x) installed on the same system without problems.
@@ -29,13 +27,13 @@ For other Linux flavors, macOS and Windows, packages are available at
 
 https://www.python.org/getit/
 
-#### Spacy
+### Spacy
 
 We need spaCy for advanced Natural Language Processing in Python.
 
 ```python
 $ pip install spacy
-#$ conda install -y spacy
+# $ conda install -y spacy
 ```
 
 ```python
@@ -44,29 +42,29 @@ $ spacy.__version__
 
     '2.0.12'
 
-#### NumPy
+### NumPy
 
 Need `NumPy` to work with arrays.
 
 ```python
 $ pip install numpy
-#$ conda install numpy
+# $ conda install numpy
 ```
 
-#### Pandas
+### Pandas
 
 Need `pandas` for data manipulation and analysis.
 
 ```python
 $ pip install pandas
-#conda install pandas
+# $ conda install pandas
 ```
 
-#### SciKit Learn
+### SciKit Learn
 
 We used `scikit-learn` for performance evaluations.
 
 ```python
 $ pip install -U scikit-learn
-#$ conda install -c conda-forge scikit-learn
+# $ conda install -c conda-forge scikit-learn
 ```
